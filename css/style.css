@@ -1,3 +1,4 @@
+/* Animate the logo with keyframes */
 #logo {
     position: relative;
     animation: mymove 5s;
@@ -15,6 +16,7 @@
     }
 }
 
+/* body and other basic elemnts' style */
 body {
     font-family: "Poppins", serif;
     background-image: url('images/concrete_seamless.png');
@@ -31,14 +33,18 @@ header {
     flex-direction: column;
 }
 
+
+/* make the links have the same color even after they have been visited.  */
 a:visited {
     color: blue;
 }
 
+/* After inspect element to fix the corners problems */
 .card {
     border-radius: 50px 50px 0px 0px;
 }
 
+/* edit the style of cards that inside of header */
 .card>header {
     background: #288088;
     border: solid 2px #45ADAD;
@@ -57,6 +63,7 @@ a:visited {
     align-items: center;
 }
 
+/* style the images in the gallery class */
 .gallery img {
     border: solid 10px #50C7C7;
     margin: 10px;
@@ -70,6 +77,8 @@ a:visited {
     flex-wrap: wrap;
 }
 
+
+/* The following specifications are for when the screen-size is greater than 900px */
 @media screen and (min-width: 900px) {
     header {
         display: flex;
@@ -78,7 +87,8 @@ a:visited {
     }
 
     .nav_links {
-        flex-direction: row;
+/* make the navbar in a row */
+        flex-direction: row; 
     }
 
     .card {
@@ -91,23 +101,26 @@ a:visited {
     }
 }
 
+
+/* The following specifications are for when the user prefers reduced motion.  */
 @media (prefers-reduced-motion: reduce) {
     #logo {
         animation: none;
     }
 }
 
+/* The following specifications are for when the page is printed in portrait mode.  */
 @media print {
     body {
         font-family: Arial, Helvetica;
         background-image: none;
     }
-
+    
+/* make the navbar no longer stock together */
     nav {
         display: flex;
         width: 100%;
     }
-
 
     .nav_links {
         display: flex;
@@ -127,12 +140,14 @@ a:visited {
         border: 2px solid #45ADDD;
         flex-basis: 325px;
     }
-
+    
+/* remove entire gallery */
     #gallery,
     .gallery {
         display: none;
     }
-
+    
+/* make a thumbs up entity inside of the content */
     .card ul li:nth-child(2)::after {
         content: "👍";
     }
