@@ -143,7 +143,9 @@ a:visited {
     }
     
 /* remove entire gallery */
-    #gallery,
+    #gallery{
+        visibility: hidden;
+    }
     .gallery {
         display: none;
     }
